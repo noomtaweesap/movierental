@@ -1,3 +1,4 @@
+"""Get Rental information."""
 from movie import Movie, PriceCode
 import logging
 
@@ -23,13 +24,15 @@ class Rental:
 		self.days_rented = days_rented
 
 	def get_movie(self):
+		"""Get movie."""
 		return self.movie
 
 	def get_days_rented(self):
+		""""""
 		return self.days_rented
 
 	def get_price(self):
-		"""Compute rental change."""
+		"""Get price from rental amount."""
 		return self.movie.get_price_code().price(self.days_rented)
 
 	def get_renter_points(self):

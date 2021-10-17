@@ -1,6 +1,5 @@
 from rental import Rental
 from movie import Movie, PriceCode
-import logging
 
 
 class Customer:
@@ -10,6 +9,7 @@ class Customer:
        movies rented for the current billing period,
        and can print a statement of his rentals.
     """
+
     def __init__(self, name: str):
         """ Initialize a new customer."""
         self.name = name

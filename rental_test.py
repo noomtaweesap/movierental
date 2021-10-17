@@ -1,3 +1,4 @@
+"""Test cases for rental.py"""
 import unittest
 from rental import Rental
 from movie import Movie, PriceCode
@@ -17,6 +18,7 @@ class RentalTest(unittest.TestCase):
 		self.assertEqual(PriceCode.regular, m.get_price_code())
 
 	def test_rental_price(self):
+		"""Test rental price."""
 		rental = Rental(self.new_movie, 1)
 		self.assertEqual(rental.get_price(), 3.0)
 		rental = Rental(self.new_movie, 5)
@@ -29,6 +31,7 @@ class RentalTest(unittest.TestCase):
 		self.assertEqual(rental.get_price(), 2.0)
 
 	def test_rental_points(self):
+		"""Test rental points."""
 		rental = Rental(self.new_movie, 2)
 		self.assertEqual(rental.get_renter_points(), 2)
 		rental = Rental(self.new_movie, 1)

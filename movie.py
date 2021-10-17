@@ -1,3 +1,4 @@
+"""Movies information and details."""
 from enum import Enum
 
 
@@ -14,7 +15,7 @@ class PriceCode(Enum):
                 }
 
     def price(self, days: int) -> float:
-        "Return the rental price for a given number of days."""
+        """Return price form number of days."""
         pricing = self.value["price"]
         return pricing(days)
 
@@ -33,10 +34,11 @@ class Movie:
         self.price_code = price_code
 
     def get_price_code(self):
-        # get the price code
+        """get the price code"""
         return self.price_code
 
     def get_title(self):
+        """Get movie title."""
         return self.title
 
     def __str__(self):
