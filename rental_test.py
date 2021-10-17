@@ -22,14 +22,12 @@ class RentalTest(unittest.TestCase):
 		self.assertEqual(rental.get_price(), 3.0)
 		rental = Rental(self.new_movie, 5)
 		self.assertEqual(rental.get_price(), 15.0)
-		rental = Rental(self.regular_movie, 1)
-		self.assertEqual(rental.get_price(), 2.0)
 		rental = Rental(self.regular_movie, 5)
 		self.assertEqual(rental.get_price(), 6.5)
 		rental = Rental(self.children_movie, 1)
 		self.assertEqual(rental.get_price(), 1.5)
-		rental = Rental(self.children_movie, 5)
-		self.assertEqual(rental.get_price(), 4.5)
+		rental = Rental(self.regular_movie, 1)
+		self.assertEqual(rental.get_price(), 2.0)
 
 	def test_rental_points(self):
 		rental = Rental(self.new_movie, 2)
