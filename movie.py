@@ -6,7 +6,7 @@ import csv
 class Movie:
     """A movie available for rent."""
     # The types of movies (price_code).
-    def __init__(self, title: str, price_code, year: int, genre: List[str]):
+    def __init__(self, title: str, year: int, genre: List[str], price_code):
         # Initialize a new movie.
         self._title = title
         self._price_code = price_code
