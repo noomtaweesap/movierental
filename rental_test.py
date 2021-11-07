@@ -1,7 +1,7 @@
 """Test cases for rental.py"""
 import unittest
-from rental import Rental
-from movie import Movie, PriceCode
+from rental import Rental, PriceCode
+from movie import Movie
 
 
 class RentalTest(unittest.TestCase):
